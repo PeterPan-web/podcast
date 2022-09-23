@@ -1,0 +1,7 @@
+{
+  "name": "bulletin",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

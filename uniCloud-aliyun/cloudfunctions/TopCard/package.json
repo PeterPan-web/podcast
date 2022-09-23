@@ -1,0 +1,7 @@
+{
+  "name": "TopCard",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {}
+  }
+}

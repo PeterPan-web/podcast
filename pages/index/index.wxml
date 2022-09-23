@@ -1,0 +1,75 @@
+<view class="headBg">
+  <view class="title"><!-- 标题轮播图等 -->
+  <swiper indicator-dots='true' autoplay='true' interval='3000' duration='1000' circular='true' class="swip">
+    <block wx:for="{{movies}}" wx:for-index="index">
+      <swiper-item>
+        <image src='{{movies[index].url}}' mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+</view>
+
+<!-- 搜索框 -->
+<view class="search">
+  <view class="img" bindtap="search">
+    <image src="../../images/index-icon/search.png"></image>
+  </view>
+  <view class="input">
+    <input type="text" placeholder="搜索" />
+  </view>
+</view>
+
+
+<!-- 发布和寻找 -->
+<view class="function">
+  <view class="release">
+    <!--发布-->
+    <view class="list">
+      <view class="img" bindtap="navigator">
+        <image src="../../images/index-icon/release.png"></image>
+      </view>
+      <navigator url="../release/release"><view class="button">
+        +发布
+      </view></navigator>
+    </view>
+    <view class="font">
+      失物招领
+    </view>
+  </view>
+
+  <view class="release">
+    <!--寻找-->
+    <view class="list">
+      <view class="img" bindtap="navigator">
+        <image src="../../images/index-icon/search.png"></image>
+      </view>
+      <navigator url="../release/release"><view class="button">
+        +发布
+      </view></navigator>
+    </view>
+    <view class="font">
+      寻物寻事
+    </view>
+  </view>
+</view>
+
+<view class="ts" style="font-size: 24rpx;color: rgb(175, 175, 175);margin-left: 55rpx;margin-top: 30rpx;">tps:听说点击小飞机和放大镜，会进入神秘世界...</view>
+
+<!-- 公告 -->
+<view class="announcement-title">
+  <view class="img">
+    <image src="../../images/index-icon/announcement.png"></image>
+  </view>
+  <view class="font">最新公告</view>
+</view>
+
+<!-- 公告内容 -->
+<view class="announcement-center">
+  <view wx:for="{{arr}}" data-index="{{index}}">
+    <view class="list">
+      <view class="li"></view>
+      <view class="font">{{arr[index].content}}</view>
+    </view>
+  </view>
+</view>
